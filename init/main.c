@@ -1039,6 +1039,7 @@ asmlinkage __visible void __init start_kernel(void)
 	sfi_init_late();
 	kcsan_init();
 
+	printk("==== Hello World! It's Jackie\n");
 	/* Do the rest non-__init'ed, we're now alive */
 	arch_call_rest_init();
 
