@@ -1,0 +1,25 @@
+From 5c3c8399e0c6fb3aeab4f013cd178b59c17a1041 Mon Sep 17 00:00:00 2001
+From: Jackie Zamow <jackie.zamow@gmail.com>
+Date: Tue, 25 Aug 2020 16:54:55 -0500
+Subject: [PATCH] fix typo in kernel/power/process.c
+
+---
+ kernel/power/process.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/kernel/power/process.c b/kernel/power/process.c
+index 4b6a54da7e65..45b054b7b5ec 100644
+--- a/kernel/power/process.c
++++ b/kernel/power/process.c
+@@ -146,7 +146,7 @@ int freeze_processes(void)
+ 	BUG_ON(in_atomic());
+ 
+ 	/*
+-	 * Now that the whole userspace is frozen we need to disbale
++	 * Now that the whole userspace is frozen we need to disable
+ 	 * the OOM killer to disallow any further interference with
+ 	 * killable tasks. There is no guarantee oom victims will
+ 	 * ever reach a point they go away we have to wait with a timeout.
+-- 
+2.20.1
+
